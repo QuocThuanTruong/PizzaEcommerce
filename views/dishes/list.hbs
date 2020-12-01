@@ -1,7 +1,7 @@
 <div class="main-content">
     
     <section class="full-height-slider type-1">
-       <div class="bg ready data-jarallax" data-jarallax="5" style="background-image: url(img/shop/main-naner-bg-2.jpg)" data-swiper-parallax="50%"></div>
+       <div class="bg ready data-jarallax" data-jarallax="5" style="background-image: url(/img/shop/main-naner-bg-2.jpg)" data-swiper-parallax="50%"></div>
 		   <div class="table-view mobile-rel-block">
 			  <div class="table-cell">
 			   <div class="container no-padd"> 
@@ -63,9 +63,9 @@
                 <h5 class="tt h5 color-2">Categories</h5>
                 <div class="empty-sm-20 empty-xs-10"></div>
                 <ul class="list-style-4 type-2 ul-list">
-                  <li><a href="#" class="link-hover">Pizza</a></li>
-                  <li><a href="#" class="link-hover">Thức uống</a></li>
-                  <li><a href="#" class="link-hover">Đồ ăn kèm</a></li>
+                  <li><a href="/dishes/Pizza" class="link-hover">Pizza</a></li>
+                  <li><a href="/dishes/Drink" class="link-hover">Thức uống</a></li>
+                  <li><a href="/dishes/Side" class="link-hover">Đồ ăn kèm</a></li>
                 </ul>
               </aside>
               <aside>
@@ -254,6 +254,7 @@
             <div class="tab-container-wraps">
               <div class="tab-container-item min-h-430">
                 <div class="row row-4-columns row-3-columns row-2-columns">
+                  {{#each dishes}}
                   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                       <div class="empty-sm-50 empty-xs-30"></div>
                       <div class="menu-item menu-item-2 type-3">
@@ -269,7 +270,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-25.jpg" alt="">
+                              <img src="/img/product-detail/{{category}}/{{_id}}/{{avatar}}" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -278,17 +279,18 @@
                           </div>
                           <div class="text">
                               <div class="empty-sm-15 empty-xs-10"></div>
-                              <h5 class="h5 caption"><a href="#" class="link-hover-line">Mediterranean Pizza</a></h5>
+                              <h5 class="h5 caption"><a href="#" class="link-hover-line">{{name}}</a></h5>
                               <div class="empty-sm-5 empty-xs-5"></div>
                               <div class="simple-text">
-                                  <p>Ut enimex ea ad minim veniam, quis nostrud exercitation.</p>
+                                  <p>{{description}}</p>
                               </div>
                               <div class="empty-sm-10 empty-xs-10"></div>
-                              <div class="menu-price style-2 title main-col">$6.25</div>
+                              <div class="menu-price style-2 title main-col">{{price}}</div>
                           </div>
                       </div>
                   </div>
-                  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  {{/each}}
+                  {{!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                       <div class="empty-sm-50 empty-xs-50"></div>
                       <div class="menu-item menu-item-2 type-3">
                           <div class="image hover-zoom">
@@ -303,7 +305,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-26.jpg" alt="">
+                              <img src="/img/shop/product-26.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -337,7 +339,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-27.jpg" alt="">
+                              <img src="/img/shop/product-27.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -371,7 +373,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-28.jpg" alt="">
+                              <img src="/img/shop/product-28.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -405,7 +407,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-29.jpg" alt="">
+                              <img src="/img/shop/product-29.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -439,7 +441,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-30.jpg" alt="">
+                              <img src="/img/shop/product-30.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -473,7 +475,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-31.jpg" alt="">
+                              <img src="/img/shop/product-31.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -507,7 +509,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-32.jpg" alt="">
+                              <img src="/img/shop/product-32.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -541,7 +543,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-33.jpg" alt="">
+                              <img src="/img/shop/product-33.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -575,7 +577,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-34.jpg" alt="">
+                              <img src="/img/shop/product-34.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -609,7 +611,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-35.jpg" alt="">
+                              <img src="/img/shop/product-35.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -643,7 +645,7 @@
                                     C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                 </svg>
                             </a>  
-                              <img src="img/shop/product-36.jpg" alt="">
+                              <img src="/img/shop/product-36.jpg" alt="">
                               <div class="vertical-align full menu-button">
                                   <a href="#" class="page-button button-style-1 type-4"><span class="txt">Add to cart</span></a>
                                   <div class="empty-sm-10 empty-xs-10"></div>
@@ -661,7 +663,7 @@
                               <div class="menu-price style-2 title main-col">$6.25</div>
                           </div>
                       </div>
-                  </div>
+                  </div> --}}
                 </div>
             </div>
             <div class="tab-container-item min-h-430">
@@ -681,7 +683,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-25.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-25.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Mediterranean Pizza</a></h5>
@@ -713,7 +715,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-26.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-26.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Pizza Margherita</a></h5>
@@ -745,7 +747,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-27.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-27.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Pizza al Prosciutto</a></h5>
@@ -777,7 +779,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-28.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-28.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Mediterranean Pizza</a></h5>
@@ -809,7 +811,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-29.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-29.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Pizza al Prosciutto</a></h5>
@@ -841,7 +843,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-30.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-30.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Mediterranean Pizza</a></h5>
@@ -873,7 +875,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-31.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-31.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Pizza al Prosciutto</a></h5>
@@ -905,7 +907,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-32.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-32.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Pizza al Prosciutto</a></h5>
@@ -937,7 +939,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-33.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-33.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Mediterranean Pizza</a></h5>
@@ -969,7 +971,7 @@
                                 C444.801,187.101,434.001,213.101,414.401,232.701z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                             </svg>
                           </a>
-                          <a href="#" class="image-hover color-1"><img src="img/shop/product-34.jpg" alt=""></a>
+                          <a href="#" class="image-hover color-1"><img src="/img/shop/product-34.jpg" alt=""></a>
                       </div>
                       <div class="text">
                           <h5 class="h5 caption"><a href="#" class="link-hover-line">Pizza al Prosciutto</a></h5>

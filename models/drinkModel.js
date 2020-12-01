@@ -19,8 +19,6 @@ exports.list = async () => {
 
     const drinks = await drinkCollection.find({}).toArray();
 
-    console.dir(drinks);
-
     return drinks;
 }
 

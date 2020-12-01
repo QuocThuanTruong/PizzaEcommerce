@@ -22,9 +22,7 @@ exports.list = async () => {
     const pizzaCollection = db().collection('Pizza');
 
     const pizzas = await pizzaCollection.find({}).toArray();
-
-    console.dir(pizzas);
-
+    
     return pizzas;
 }
 

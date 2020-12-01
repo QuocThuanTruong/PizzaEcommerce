@@ -15,16 +15,14 @@ class Side {
 }
 
 exports.list = async () => {
-    const sideCollection = db().collection('Drink');
+    const sideCollection = db().collection('Side');
     const sides = await sideCollection.find({}).toArray();
     
-    console.dir(sides);
-
     return sides;
 }
 
 exports.get = async (id) => {
-    const sideCollection = db().collection('Drink');
+    const sideCollection = db().collection('Side');
     const side = await sideCollection.findOne({_id: ObjectId(id)})
 
     return side;
