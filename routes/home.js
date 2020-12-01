@@ -7,8 +7,8 @@ router.get('/', homeController.index)
 
 router.get('/about', homeController.about)
 
-router.get('/blog', homeController.about)
+router.get('/blog', homeController.blog)
 
-router.get('/contact', homeController.about)
+router.get('/contact', homeController.contact)
 
 module.exports = router;

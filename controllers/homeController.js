@@ -24,3 +24,11 @@ exports.index = async (req, res, next) => {
 exports.about = (req, res, next) => {
     res.render('index/about', {})
 }
+
+exports.blog = (req, res, next) => {
+    res.render('index/blog', {})
+}
+
+exports.contact = (req, res, next) => {
+    res.render('index/contact', {})
+}
