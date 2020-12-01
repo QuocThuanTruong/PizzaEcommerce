@@ -19,17 +19,19 @@ class Pizza {
 }
 
 exports.list = async () => {
-    const pizzaCollection = db().collection('Pizza');
+    const pizzaCollection = db().collection('pizza');
 
     const pizzas = await pizzaCollection.find({}).toArray();
-    
+
     return pizzas;
 }
 
 exports.get = async (id) => {
-    const pizzaCollection = db().collection('Pizza');
+    const pizzaCollection = db().collection('pizza');
 
     const pizza = await pizzaCollection.findOne({_id: ObjectId(id)})
+
+    console.log(pizza)
 
     return pizza;
 }

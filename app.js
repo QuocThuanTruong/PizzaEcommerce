@@ -3,15 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var hbs = require('hbs');
 
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const dishesRouter = require('./routes/dishes')
-const detailRouter = require('./routes/detail');
 
 require('./dal/db');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,13 +26,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
 app.use('/dishes', dishesRouter);
-app.use('/detail', detailRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+hbs.registerPartials(__dirname + '/views/partials');
 
 // error handler
 app.use(function(err, req, res, next) {

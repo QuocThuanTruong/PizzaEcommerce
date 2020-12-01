@@ -15,7 +15,7 @@ class Drink {
 }
 
 exports.list = async () => {
-    const drinkCollection = db().collection('Drink');
+    const drinkCollection = db().collection('drink');
 
     const drinks = await drinkCollection.find({}).toArray();
 
@@ -23,7 +23,7 @@ exports.list = async () => {
 }
 
 exports.get = async (id) => {
-    const drinkCollection = db().collection('Drink');
+    const drinkCollection = db().collection('drink');
 
     const drink = await drinkCollection.findOne({_id: ObjectId(id)})
 
