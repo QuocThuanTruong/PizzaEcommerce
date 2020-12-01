@@ -4,10 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-const pizzaRouter = require('./routes/pizza');
-const detailRouter=require('./routes/detail');
+const homeRouter = require('./routes/home');
+const usersRouter = require('./routes/users');
+const dishesRouter = require('./routes/dishes')
+const detailRouter = require('./routes/detail');
+
+require('./dal/db');
 
 var app = express();
 
@@ -21,9 +23,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', homeRouter);
 app.use('/users', usersRouter);
-app.use('/pizza', pizzaRouter);
+app.use('/dishes', dishesRouter);
 app.use('/detail', detailRouter);
 
 
