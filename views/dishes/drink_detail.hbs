@@ -181,7 +181,6 @@
     </header>
  
  <div class="main-content">
-   {{#each dish}}
     <section class="full-height-slider type-1">
         <div class="bg ready data-jarallax" data-jarallax="5" style="background-image: url(/img/product-detail/main-baner-bg.jpg)" data-swiper-parallax="50%"></div>
 		    <div class="table-view mobile-rel-block">
@@ -212,7 +211,7 @@
       <div class="container"> 
         <div class="row">
           <div class="col-lg-6 col-md-5 col-xs-12">
-            <img src="/img/product-detail/{{category}}/{{_id}}/{{avatar}}" alt="" class="full-img">
+            <img src="{{avatar}}" alt="" class="full-img">
           </div>
           <div class="col-lg-6 col-md-7 col-xs-12">
             <div class="empty-sm-0 empty-xs-30"></div>
@@ -281,18 +280,12 @@
                   <p>{{description}}</p>
                 </div>
                 <div class="row">
+                  {{#each images}}
                   <div class="col-sm-4 col-xs-12">
                     <div class="empty-sm-45 empty-xs-20"></div>
-                    <img src="/img/product-detail/description-1.jpg" alt="" class="full-img">
+                    <img src="{{src}}" alt="" class="full-img">
                   </div>
-                  <div class="col-sm-4 col-xs-12">
-                    <div class="empty-sm-45 empty-xs-20"></div>
-                    <img src="/img/product-detail/description-2.jpg" alt="" class="full-img">
-                  </div>
-                  <div class="col-sm-4 col-xs-12">
-                    <div class="empty-sm-45 empty-xs-20"></div>
-                    <img src="/img/product-detail/description-3.jpg" alt="" class="full-img">
-                  </div>
+                  {{/each}}
                 </div>
               </div>
               <div class="tab-container-item min-h-430">
@@ -723,7 +716,6 @@
       </div>
       <div class="empty-lg-140 empty-md-100 empty-sm-60 empty-xs-60"></div>
     </section>
-    {{/each}}
 </div>
 
    

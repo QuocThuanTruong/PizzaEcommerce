@@ -25,36 +25,25 @@ exports.category = async (req, res, next) => {
 exports.details = async (req, res, next) => {
     const category = req.params.category
 
-    let dish = {}
     let dishForBiding = []
 
     switch (category) {
         case 'pizza' : 
-            dish = await pizzaModel.get(req.params.id)
+            const pizza = await pizzaModel.get(req.params.id)
 
-            dishForBiding = [dish]
-
-            const size = dish.size
-            const dough = dish.dough
-            const toping = dish.toping
-
-            res.render('dishes/pizza_detail', {dish: dishForBiding, size, dough, toping})
+            res.render('dishes/pizza_detail', pizza)
             break
 
         case 'drink' : 
-            dish = await drinkModel.get(req.params.id)
+            const drink = await drinkModel.get(req.params.id)
 
-            dishForBiding = [dish]
-
-            res.render('dishes/drink_detail', {dish: dishForBiding})
+            res.render('dishes/drink_detail', drink)
             break
 
         case 'side' : 
-            dish = await sideModel.get(req.params.id)
+            const side = await sideModel.get(req.params.id)
 
-            dishForBiding = [dish]
-
-            res.render('dishes/side_detail', {dish: dishForBiding})
+            res.render('dishes/side_detail', side)
             break
     }
     
